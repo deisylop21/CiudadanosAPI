@@ -1,15 +1,11 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+22:49:38] File change detected. Starting incremental compilation...
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+src/auth/application/use-cases/register-user.use-case.ts:39:38 - error TS2345: Argument of type '{ type: $Enums.UserType; names: string; father_lastname: string; mother_lastname: string; email: string; password: string; username: string; birth_date: Date; phone: string; profile_picture: string | undefined; account_status: string; }' is not assignable to parameter of type 'CreateUserInput'.
+  Types of property 'account_status' are incompatible.
+    Type 'string' is not assignable to type 'AccountStatus | undefined'.
 
-generator client {
-  provider = "prisma-client-js"
-  output   = "../generated/prisma"
-}
+39     await this.userRepository.create(userToCreate);
+                                        ~~~~~~~~~~~~
 
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
+[22:49:38] Found 1 error. Watching for file changes.
+
